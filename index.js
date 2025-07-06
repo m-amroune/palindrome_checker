@@ -2,7 +2,7 @@ const checkBtn = document.querySelector("#check-btn");
 const result = document.querySelector("#result");
 const textInput = document.querySelector("#text-input");
 
-// INPUT
+// arrow function for check value
 
 const alertInput = () => {
     checkBtn.addEventListener("click",() => {
@@ -14,8 +14,30 @@ const alertInput = () => {
 
 alertInput()
 
-// CLEAN
+// arrow function for clean input
 
-// PALINDROME ?
+const cleanInput = (input) => {
+    const regex = /[^A-Za-z0-9]+/g;
+    return input.replace(regex, '').toLowerCase(); 
+}
 
-// RESULT DISPLAY
+// arrow function for check if PALINDROME 
+
+const checkPalindrome = () => {
+  
+    checkBtn.addEventListener('click',()=>{
+        let originalInput = textInput.value;
+          let cleanedInput = cleanInput(originalInput );
+        if(cleanedInput === cleanedInput.split('').reverse().join('')){
+        
+            result.innerHTML = `${originalInput } is a palindrome`
+        } else {
+             result.innerHTML = `${originalInput } is not a palindrome`
+        }
+    })
+}
+checkPalindrome()
+
+
+
+
