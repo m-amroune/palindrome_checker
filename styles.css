@@ -10,7 +10,7 @@ html, body {
 }
 
 body {
-    background-color: #1E90FF; 
+    background-color: #000080; 
     font-size: 16px; 
     display: flex;
     flex-direction: column;
@@ -19,10 +19,80 @@ body {
     height: 100vh;
 }
 
+h1{
+    font-size: 3rem;
+    color: #fff;
+}
+
+#container{
+    background-color:#ffffff ;
+    padding: 1rem;
+    width: 460px;
+    border-radius: 25px;
+    text-align: center;
+}
+
+
 label{
     display: block;
+    font-weight: 400;
+    margin-bottom: 1.5rem;
+}
+
+#text-input{
+    border: none; 
+    border-bottom: 2px solid #4B0082; 
+    
+}
+
+#check-btn{
+    background-color: #4B0082;
+    color: #ffffff;
+    border-radius: 25px;
+    padding: 0.3rem 1rem;
+    margin-left: 0.5rem;
+}
+
+#result{
+    font-size: 1.5rem;
 }
 
 #definition{
-    width: 250px;
+    width: 460px;
+    font-size: 1.6rem;
+    text-align: center;
+    background-color: #006400;
+    color: #ffffff;
+    padding: 1rem;
+    border-radius: 25px;
+    margin-top: 1.5rem;
+}
+
+i{
+    color: orange;
+}
+
+@media (max-width: 520px) {
+    #container {
+        width: 95%; 
+        margin: 1rem; 
+    }
+
+    #definition {
+        width: 95%; 
+        margin-top: 1rem; 
+        margin-left: 1rem;
+        }
+
+    #text-input {
+        width: 80%; 
+        margin-bottom: 1rem; 
+         margin-left: 0; 
+       
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
 }
